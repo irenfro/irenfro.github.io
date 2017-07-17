@@ -305,49 +305,33 @@ textarea {
     font-size: 1.25em
 }
 
-.post-list {
-    padding: 2em 3em 0 3em
+.about-section {
+    padding: 2em 3em 0 3em;
+    text-align: left;
 }
 
-.post-list h4 {
-    color: #bbb;
-    font-style: italic;
-    font-size: 1em
-}
-
-.post-list .post-list-item {
-    padding-bottom: 1em
-}
-
-.post-body {
-    padding: 2em 0 3em 0
-}
-
-.post-body h4 {
-    color: #555;
-    font-style: italic;
-    font-size: 1em
-}
-
-.inverted {
-    background-color: #333;
-    color: white;
+.about {
+    background-color: #cccc99;
+    color: #003366;
+    position: absolute;
+    z-index: 3;
     width: 100%;
     height: auto;
-    margin-top: 100vh
+    margin-top: 100vh;
+    text-align: center;
 }
 
-.inverted #main-container {
+.about #main-container {
     padding: 8em 1em
 }
 
-.inverted hr {
+.about hr {
     color: white;
     background-color: white
 }
 
-.inverted h3 a {
-    color: white
+.about h3 a {
+    color: #003366
 }
 
 #writings {
@@ -380,12 +364,11 @@ section {
 }
 
 a {
-    text-decoration: none;
-    color: black !important;
+    text-decoration: none !important;
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: none;
 }
 
 .title-finish {
@@ -407,7 +390,7 @@ h1.colored {
     color: #003366;
 }
 
-button.colored {
+a.colored {
     color: #999999;
     background-color: #003366;
 }
@@ -482,6 +465,11 @@ button.colored {
     clear: both
 }
 
+.links {
+    text-align: center;
+    margin-top: 100px;
+    z-index: 5;
+}
 
 /* ==========================================================================
    Helper classes
