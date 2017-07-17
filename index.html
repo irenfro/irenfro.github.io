@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Ian Renfro</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="backbackground">
+            <div id="background">
+            </div>
+        </div>
+        <div id="cover-title">
+            <section id="title">
+                <div class="section-container">
+                    <a href=/><img class="photo-self" src="assets/img/headshot.jpeg"></a>
+
+                    <h1 class="colored">Ian Renfro</h1>
+                    <br/>
+                    <div id="navbar" class="navbar">
+                        <a href="https://github.com/irenfro"><h2 class="name link">Github</h2></a>
+                        <a href="/about.html"><h2 class="name link">about</h2></a>
+                        <a href="/#writings"><h2 class="name link">blog</h2></a>
+                        <a href="/projects.html"><h2 class="name link">projects</h2></a>
+                        <button type="button" class="btn btn-primary colored">Secondary</button>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <div class="title-finish">
+            </div>
+        </div>
+
+        <div id="inverted-main" class="inverted">
+            <div id="main-container">
+                <section id="writings" class="section-container">
+
+                    <h2>Posts</h2>
+                    <hr>
+
+
+                    <section class="section-container post-list">
+
+                        <article class="post-list-item">
+
+                            <h3>
+                                <a class="post-link" href="/2017/03/26/updates.html">updates</a>
+                            </h3>
+                            <h4> Mar 26, 2017 </h4>
+                            <p> I'm doing things. </p>
+                        </article>
+
+                    </section>
+
+
+                </section>
+
+            </div>
+        </div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+
+        <script>
+            // Add scrollspy to <body>
+            $('body').scrollspy({target: ".navbar", offset: 50});
+
+            // Add smooth scrolling on all links inside the navbar
+            $("#navbar a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+
+                } // End if
+
+            });
+        </script>
+    </body>
+</html>
