@@ -108,8 +108,7 @@
                     $body.removeClass('is-loading');
                 }, 250);
             });
-            // Fix: Placeholder polyfill.
-            $('form').placeholder();
+
             // Prioritize "important" elements on mobile.
             skel.on('+mobile -mobile', function() {
                 $.prioritize(
@@ -117,8 +116,7 @@
                     skel.breakpoint('mobile').active
                 );
             });
-            // Scrolly.
-            $('.scrolly').scrolly();
+
         });
     })(jQuery);
 </script>
