@@ -10,10 +10,12 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
-    color: #222;
+html * {
+    color: #003366;
     font-size: 1em;
     line-height: 1.4;
+    font-family: 'Open Sans', serif !important;
+
 }
 
 /*
@@ -378,7 +380,7 @@ a:hover {
     right: 0px;
     bottom: 0px;
     z-index: 3;
-    background: #c7c7c7
+    background: #cccccc
 }
 
 h1 h2 h3 h4 {
@@ -415,6 +417,33 @@ a.colored {
     background-size: cover;
     transition: opacity 2s ease;
     background-image: url("../img/background.png");
+}
+
+#projects-title {
+    left: 0px;
+    top: -webkit-calc(50vh - 100px);
+    top: -moz-calc(50vh - 100px);
+    top: calc(50vh - 100px);
+    width: 100%;
+    height: -webkit-calc(50vh + 100px);
+    height: -moz-calc(50vh + 100px);
+    height: calc(50vh + 100px)
+}
+
+#projects-title #title {
+    position: relative;
+    -webkit-animation: onload-inverted 1s ease;
+    -moz-animation: onload-inverted 1s ease;
+    -o-animation: onload-inverted 1s ease;
+    animation: onload-inverted 1s ease;
+    z-index: 5;
+    padding: 0px
+}
+
+#projects-title:after {
+    content: "";
+    display: block;
+    height: 0px
 }
 
 #cover-title {
