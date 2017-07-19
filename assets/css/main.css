@@ -371,6 +371,15 @@ a {
     transition: .25s all;
 }
 
+a.projectCard {
+    color: #003366 !important;
+}
+
+a.projectCard:hover {
+    text-decoration: underline !important;
+    color: #666666 !important;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -521,7 +530,7 @@ a.colored {
     color: #003366 !important;
 }
 
-@media (min-width: 34em) {
+@media (min-width: 544px) {
     .card-columns {
         -webkit-column-count: 2;
         -moz-column-count: 2;
@@ -529,29 +538,13 @@ a.colored {
     }
 }
 
-@media (min-width: 48em) {
+/*@media (min-width: 768px) {
     .card-columns {
         -webkit-column-count: 3;
         -moz-column-count: 3;
         column-count: 3;
     }
-}
-
-@media (min-width: 62em) {
-    .card-columns {
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
-    }
-}
-
-@media (min-width: 75em) {
-    .card-columns {
-        -webkit-column-count: 5;
-        -moz-column-count: 5;
-        column-count: 5;
-    }
-}
+}*/
 
 /* ==========================================================================
    Helper classes
