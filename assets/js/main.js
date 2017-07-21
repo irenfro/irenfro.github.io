@@ -1,4 +1,3 @@
-
 (function (b, o, i, l, e, r) {
     b.GoogleAnalyticsObject = l;
     b[l] || (b[l] =
@@ -16,14 +15,16 @@ ga('send', 'pageview');
 
 
 // to top right away.
-if ( window.location.hash ) scroll(0,0);
+if (window.location.hash) scroll(0, 0);
 // void some browsers issue
-setTimeout( function() { scroll(0,0); }, 1);
+setTimeout(function () {
+    scroll(0, 0);
+}, 1);
 
-$(function() {
+$(function () {
 
     // your current click function
-    $('.scroll').on('click', function(e) {
+    $('.scroll').on('click', function (e) {
         e.preventDefault();
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top + 'px'
@@ -31,12 +32,27 @@ $(function() {
     });
 
     // *only* if we have anchor on the url
-    if(window.location.hash) {
+    if (window.location.hash) {
 
         // smooth scroll to the anchor id
         $('html, body').animate({
             scrollTop: $(window.location.hash).offset().top + 'px'
         }, 1500, 'swing');
+
+        var scrollV, scrollH, loc = window.location;
+        if ("pushState" in history) {
+            history.pushState("", document.title, loc.pathname + loc.search);
+        } else {
+            // Prevent scrolling by storing the page's current scroll offset
+            scrollV = document.body.scrollTop;
+            scrollH = document.body.scrollLeft;
+
+            loc.hash = "";
+
+            // Restore the scroll offset, should be flicker free
+            document.body.scrollTop = scrollV;
+            document.body.scrollLeft = scrollH;
+        }
     }
 
 });
@@ -69,8 +85,6 @@ $("#navbar a").on('click', function (event) {
     } // End if
 
 });
-
-
 
 
 (function ($) {
