@@ -31,8 +31,4 @@ application = Flask(__name__, template_folder=template_path)
 @application.route('/')
 def root():
 	return render_template('index.html')
-
-@application.route('/projects.html')
-def projects():
-	return render_template('projects.html')
 ```
