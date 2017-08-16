@@ -343,6 +343,10 @@ textarea {
         margin-right: 0 !important;
         margin-left: 0 !important;
     }
+
+    .section-container {
+        margin: 10px !important;
+    }
 }
 
 @media (min-width: 767px){
