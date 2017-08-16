@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html * {
-    color: #003366;
+    color: #000000;
     font-size: 1em;
     line-height: 1.4;
     font-family: 'Open Sans', serif !important;
@@ -278,110 +278,37 @@ textarea {
     width: 200px;
     max-width: 50%;
     border-radius: 50%;
-    transition: all .5s ease;
+    transition: all 1s ease;
     -webkit-filter: none;
     -moz-filter: none;
     -o-filter: none;
-    filter: none
+    filter: none;
+    border: solid black;
 }
 
-#title .photo-self:hover {
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    filter: blur(3px)
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
 }
 
-#title .navbar {
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+#title #navbar {
     display: inline
 }
 
-#title .navbar * {
+#title #navbar * {
     width: -moz-fit-content;
     width: fit-content;
     display: inline
 }
 
-#title .navbar h2 {
+#title #navbar h2 {
     padding: 0 0.25rem 0 0.25rem;
     font-size: 1.25em
-}
-
-.about-section {
-    padding: 2em 2em 0 2em;
-    text-align: left;
-}
-
-.about {
-    background-color: #cccc99;
-    color: #003366;
-    position: absolute;
-    z-index: 3;
-    width: 100%;
-    height: auto;
-    margin-top: 100vh;
-    text-align: center;
-}
-
-.about #main-container {
-    padding: 8em 1em
-}
-
-.about hr {
-    color: white;
-    background-color: white
-}
-
-.about h3 a {
-    color: #003366
-}
-
-#writings {
-    -webkit-animation: none;
-    -moz-animation: none;
-    -o-animation: none;
-    animation: none
-}
-
-@media all and (max-width: 480px) {
-    .post-list {
-        padding: 2em 0 0 0
-    }
-}
-
-body {
-    margin: 0px
-}
-
-*, *::before, *::after {
-    box-sizing: border-box
-}
-
-section {
-    padding-top: 2em;
-    -webkit-animation: onload 1s ease;
-    -moz-animation: onload 1s ease;
-    -o-animation: onload 1s ease;
-    animation: onload 1s ease
-}
-
-a {
-    text-decoration: none !important;
-    -webkit-transition: .25s all;
-    transition: .25s all;
-}
-
-a.projectCard {
-    color: #003366 !important;
-}
-
-a.projectCard:hover {
-    text-decoration: underline !important;
-    color: #666666 !important;
-}
-
-a:hover {
-    text-decoration: none;
 }
 
 .title-finish {
@@ -391,43 +318,46 @@ a:hover {
     right: 0px;
     bottom: 0px;
     z-index: 3;
-    background: #cccccc
+    background: #9A9A9A;
+    border-top: solid black;
 }
 
-h1 h2 h3 h4 {
-    font-family: serif;
-    color: #003366 !important
-}
-
-h1.colored {
+.projects {
+    background-color: #3B0E84;
     color: #003366;
-}
-
-a.colored {
-    color: #999999;
-    background-color: #003366;
-}
-
-#main-container {
-    font-family: "Droid Sans Mono", monospace;
-    max-width: 1024px;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px
-}
-
-#background {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    height: 50vh;
+    position: absolute;
+    z-index: 3;
     width: 100%;
-    opactiy: 0;
-    z-index: 0;
-    background: scroll center center;
-    background-size: cover;
-    transition: opacity 2s ease;
-    background-image: url("../img/background.png");
+    height: auto;
+    text-align: center;
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .card-deck .card:not(:first-child) {
+        margin-left: 0 !important;
+    }
+}
+
+@media(max-width: 767px) {
+    .card-deck .card:not(:last-child) {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+@media (min-width: 767px){
+    .card-deck .card:not(:first-child) {
+        margin-right: 0 !important;
+     }
+
+    .card-deck .card:not(:last-child) {
+        margin-left: 0 !important;
+    }
+}
+
+.projects-section {
+    padding: 2em 2em 0 2em;
+    text-align: left;
 }
 
 #projects-title {
@@ -485,13 +415,145 @@ a.colored {
     height: 0px
 }
 
+.about-section {
+    text-align: left;
+}
+
+.about {
+    color: #003366;
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    margin-top: 100vh;
+    text-align: center;
+}
+
+.about #main-container {
+    padding: 5em 0em
+}
+
+.about hr {
+    color: white;
+    background-color: white
+}
+
+.about h3 a {
+    color: #003366
+}
+
+.greyToGold {
+    height: 200px;
+    background: -webkit-linear-gradient(#9A9A9A, #0066cc);
+    background: -moz-linear-gradient(#9A9A9A, #0066cc);
+    background: linear-gradient(#9A9A9A, #0066cc);
+}
+
+.goldToGrey {
+    height: 200px;
+    background: -webkit-linear-gradient(#0066cc, #3B0E84);
+    background: -moz-linear-gradient(#0066cc, #3B0E84);
+    background: linear-gradient(#0066cc, #3B0E84);
+}
+
+@media all and (max-width: 480px) {
+    .post-list {
+        padding: 2em 0 0 0
+    }
+}
+
+body {
+    margin: 0px
+}
+
+*, *::before, *::after {
+    box-sizing: border-box
+}
+
+section {
+    padding-top: 2em;
+    -webkit-animation: onload 1s ease;
+    -moz-animation: onload 1s ease;
+    -o-animation: onload 1s ease;
+    animation: onload 1s ease
+}
+
+a {
+    text-decoration: none !important;
+    -webkit-transition: .25s all;
+    transition: .25s all;
+}
+
+a.projectCard {
+    color: #FFFFFF !important;
+}
+
+a.projectCard:hover {
+    text-decoration: underline !important;
+    color: #666666 !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.colored {
+    color: #FFFFFF;
+    background-color: #003366;
+}
+
+.navbar-inverse > .navbar-toggler {
+    border-color: #000000 !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
+
+#nav {
+    background-color: inherit;
+}
+
+h1 h2 h3 h4 {
+    font-family: serif;
+    color: #000000 !important
+}
+
+h1.colored {
+    color: #003366;
+}
+
+#main-container {
+    background-color: #0066cc;
+    font-family: "Droid Sans Mono", monospace;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+#background {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 50vh;
+    width: 100%;
+    opactiy: 0;
+    z-index: 0;
+    background: scroll center center;
+    background-size: cover;
+    transition: opacity 2s ease;
+    background-image: url("../img/background.png");
+}
+
 .centered-text {
     text-align: center
 }
 
 .section-container {
     width: auto;
-    height: auto
+    height: auto;
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 .grid-container {
@@ -511,6 +573,11 @@ a.colored {
     z-index: 5;
 }
 
+.customGroup {
+    text-align: center;
+    z-index: 5;
+}
+
 .card {
     overflow: hidden;
     -webkit-transition: .25s box-shadow;
@@ -522,12 +589,16 @@ a.colored {
 }
 
 .card-primary {
-    background-color: #cccc99 !important;
-    border-color: #cccc99 !important;
+    background-color: #9A9A9A !important;
+    border-color: #9A9A9A !important;
 }
 
 .card-title {
-    color: #003366 !important;
+    color: #FFFFFF !important;
+}
+
+.card-blockquote > p {
+    color: #FFFFFF;
 }
 
 @media (max-width: 600px) {
@@ -551,182 +622,5 @@ a.colored {
         -webkit-column-count: 3 !important;
         -moz-column-count: 3 !important;
         column-count: 3 !important;
-    }
-}
-
-/*@media (min-width: 768px) {
-    .card-columns {
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-    }
-}*/
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden {
-    display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- */
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-/*
- * Extends the .visuallyhidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-    visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
-
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
-        background: transparent !important;
-        color: #000 !important;
-        /* Black prints faster:
-                                          http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
     }
 }

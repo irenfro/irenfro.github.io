@@ -32,7 +32,7 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
 <![endif]-->
-
+<div id="home"></div>
 <div id="backbackground">
     <div id="background">
     </div>
@@ -40,38 +40,48 @@
 <div id="cover-title">
     <section id="title">
         <div class="section-container">
-            <a href=/><img class="photo-self" src="assets/img/headshot.jpeg"></a>
+            <img class="photo-self" src="assets/img/headshot.jpeg">
 
-            <h1 class="colored">Ian Renfro</h1>
+            <h1 id="name">Ian Renfro</h1>
             <br/>
-            <div id="navbar" class="navbar">
-                <a href="/#about" class="btn btn-primary colored" role="button">About</a>
-                <a href="/projects.html" class="btn btn-primary colored" role="button">Projects</a>
-            </div>
+            <nav id="nav" class="navbar navbar-toggleable-md navbar-inverse" style="padding-top: 0">
+                <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <div class="btn-group customGroup" role="group">
+                        <a href="/#home" class="btn btn-primary colored" role="button">Home</a>
+                        <a href="/#about" class="btn btn-primary colored" role="button">About</a>
+                        <a href="/#projects" class="btn btn-primary colored" role="button">Projects</a>
+                    </div>
+                </div>
+            </nav>
         </div>
     </section>
 
     <div class="title-finish">
     </div>
 </div>
-
 <div id="inverted-main" class="about">
+    <div class="greyToGold"></div>
     <div id="main-container">
         <section id="about" class="section-container">
 
-            <h2>About Me</h2>
+            <div style="text-align: center;"><h2>About Me</h2></div>
             <hr>
-
-
             <section class="section-container about-section">
 
                 <article class="about-section">
-                    <p>I am from Almaden Valley, California and I am currently a Junior studying Computer Science at
-                        Purdue University. I have considerable experience writing software in Java, C, Python along with
-                        frameworks such as Flask and Angular. I am looking to gain more experience through industry in a
-                        software engineering internship. My hobbies include surfing, longboarding and archery.</p>
+                    <div style="text-align: center;"><p>I am from Almaden Valley, California and I am currently a Junior
+                        studying Computer Science at
+                        Purdue University. I have considerable experience writing software in Java, C, Python along
+                        with
+                        frameworks such as Flask and Angular. I am looking to gain more experience through industry
+                        in a
+                        software engineering internship. My hobbies include surfing, longboarding and archery.</p></div>
                 </article>
 
             </section>
@@ -84,13 +94,106 @@
                target="_blank">LinkedIn</a>
         </div>
     </div>
-</div>
-<footer>
+    <div class="goldToGrey"></div>
+    <div class="projects">
+        <section id="projects" class="section-container">
+            <div style="height: 5vh; background-color: #3B0E84"></div>
+            <h2>Projects Contributed to</h2>
+            <hr>
+            <section class="section-container about-section">
+                <article class="about-section">
+                    <div class="card-deck">
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a
+                                    href="https://github.com/MaxLinCode/tardy-HackIllinois-2017"
+                                    target="_blank" class="projectCard">Tardy</a>
+                            </h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>A web app that helps prevent people from being late by analyzing meeting times.</p>
+                            </blockquote>
+                        </div>
+                        <div class="w-100 hidden-xs-down hidden-md-up"><!-- wrap every 2 on sm--></div>
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a
+                                    href="https://github.com/Springo/Project-Euler-Library-Code"
+                                    target="_blank" class="projectCard">Project Euler Library Code</a></h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>A collection of library functions to help solve <a href="https://projecteuler.net/"
+                                                                                      target="_blank"
+                                                                                      style="color: #000000">Project
+                                    Euler</a> problems. Here is a
+                                    link to <a href="https://projecteuler.net/" target="_blank" style="color: #000000">Project
+                                        Euler</a> if you are not familiar with it.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <div style="height: 5vh; background-color: #3B0E84"></div>
+            <h2>Personal Projects</h2>
+            <hr>
+            <section class="section-container about-section">
 
-</footer>
+                <article class="about-section">
+                    <div class="card-deck">
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a href="https://github.com/irenfro/ArduinoMorseCode"
+                                                                   target="_blank"
+                                                                   class="projectCard">Arduino Morse Code</a>
+                            </h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>An application that uses an Arduino and the Arduino's LCD Screen to input Morse Code
+                                    and
+                                    translate the code into a readable sentence.</p>
+                            </blockquote>
+                        </div>
+                        <div class="w-100 hidden-xs-down hidden-md-up"><!-- wrap every 2 on sm--></div>
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a href="https://github.com/irenfro/Asteroids"
+                                                                   target="_blank" class="projectCard">Asteroids</a>
+                            </h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>The Atari game Asteroids for your computer, written in python, has a bit of
+                                    customizability as well.</p>
+                            </blockquote>
+                        </div>
+                        <div class="w-100 hidden-xs-down visible-md-up"><!-- wrap every 2 on sm--></div>
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a href="https://github.com/irenfro/Shell"
+                                                                   target="_blank"
+                                                                   class="projectCard">Shell</a></h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>A standard shell written in C++.</p>
+                            </blockquote>
+                        </div>
+                        <div class="w-100 hidden-xs-down hidden-md-up"><!-- wrap every 2 on sm--></div>
+                        <div class="card card-inverse card-primary p-3 text-center mb-3">
+                            <h4 class="card-title" align="left"><a href="https://github.com/irenfro/Eigenvalues"
+                                                                   target="_blank" class="projectCard">Eigenvalues</a>
+                            </h4>
+                            <hr>
+                            <blockquote class="card-blockquote">
+                                <p>A program written in python with NumPy that finds the Eigenvalues of a matrix using
+                                    QR-Decomposition.</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+                <div style="height: 10vh; background-color: #3B0E84"></div>
+            </section>
+        </section>
+    </div>
+    <footer>
+
+    </footer>
 
 
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script src="assets/js/main.js"></script>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -58,10 +58,10 @@ $(function () {
 });
 
 // Add scrollspy to <body>
-$('body').scrollspy({target: ".navbar", offset: 50});
+$('body').scrollspy({target: ".nav", offset: 50});
 
 // Add smooth scrolling on all links inside the navbar
-$("#navbar a").on('click', function (event) {
+$("#nav a").on('click', function (event) {
 
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
@@ -85,6 +85,30 @@ $("#navbar a").on('click', function (event) {
     } // End if
 
 });
+
+$(document).ready(function() {
+
+    $(window).scroll(function () {
+        //if you hard code, then use console
+        //.log to determine when you want the
+        //nav bar to stick.
+        if(notInView('#name')) {
+            $('#nav').addClass('fixed-top');
+        } else {
+            $('#nav').removeClass('fixed-top');
+        }
+    });
+});
+
+function notInView(elem){
+
+    var docViewTop = $(window).scrollTop();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return (elemBottom <= docViewTop);
+}
 
 
 (function ($) {
