@@ -12,7 +12,7 @@
 
 #### The Rest is assuming that you are using `python-flask` and `passenger` to host the app
 
-5. Move the __index.html__, __projects.html__, and __404.html__ to the *templates* directory
+5. Move the __index.html__ and __404.html__ to the *templates* directory
 6. Put the template path into the Flask app
 7. Run the server
 
